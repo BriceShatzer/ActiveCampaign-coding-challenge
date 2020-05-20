@@ -1,3 +1,4 @@
+// import { hot } from 'react-hot-loader/root';
 import React, { Component} from "react";
 import "./App.css";
 
@@ -98,5 +99,5 @@ function TotalAmountSpeechBubble (props) {
 
 
 
-
 export default App;
+//export default hot(module)(App);
