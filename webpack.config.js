@@ -19,7 +19,7 @@ module.exports = {
         // new HtmlWebpackPlugin({
         //   title: 'Hot Module Replacement',
         // }),
-      ],
+    ],    
     module: {
         rules: [{
             test: /\.(js|jsx)$/,
