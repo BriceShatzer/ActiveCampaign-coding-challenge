@@ -1,0 +1,143 @@
+:root {
+      
+/* // Primary palette */
+--ocean: #356ae6;
+--ocean-120: #1b54d9;
+--ocean-80: #5884ea;
+--ocean-60: #c1d1f7;
+--ocean-40: #e3ebfc;
+--ocean-30: #edf3fe;
+--ocean-20: #fafbff;
+--slate: #4e5468;
+--slate-120: #1f2129;
+--slate-80: #5f667e;
+--slate-60: #9298ad;
+--slate-40: #ced3e0;
+--slate-30: #edf0f7;
+--slate-20: #f7f9ff;
+--mint: #19cca3;
+--mint-120: #139879;
+--mint-80: #1bddb1;
+--mint-60: #6ae6c9;
+--mint-40: #b6f2e4;
+--mint-20: #ebfffa;
+
+/* // Secondary palette */
+--strawberry: #f3376b;
+--strawberry-120: #e40e49;
+--strawberry-80: #f56e94;
+--strawberry-60: #faa5bd;
+--strawberry-40: #fcdee7;
+--strawberry-20: #fff2f6;
+--creamsicle: #ff8730;
+--creamsicle-120: #f46700;
+--creamsicle-80: #ffa869;
+--creamsicle-60: #ffbf90;
+--creamsicle-40: #ffe1cb;
+--creamsicle-20: #fff8f2;
+--lavender: #9159fc;
+--lavender-120: #73f;
+--lavender-80: #aa81fc;
+--lavender-60: #c3a7fc;
+--lavender-40: #eae0fe;
+--lavender-20: #f7f2ff;
+--banana: #facf3f;
+--banana-120: #deaa00;
+--banana-80: #fbd965;
+--banana-60: #fce28b;
+--banana-40: #fdecb2;
+--banana-20: #fff9e6;
+
+/* --- */
+--sharedBorderRadius: 6px;
+
+}
+body {
+    /* background-color: var(--ocean-60); */
+    background-color: var(--slate-20);
+    /*
+    --slate-20
+    --ocean-20
+    --ocean-40
+    */
+}
+input:focus,
+input:active,
+button:focus,
+button:active {
+  outline: none;
+}
+.App {
+    max-width: 75vw;
+    padding:16rem;
+    display: flex;
+    flex-direction: column;
+}
+.totalAmountSpeechBubble{
+    background-color:blue;
+    color:white;
+}
+.card {
+    box-shadow: 0 0 5px var(--slate-40);  
+    background-color: white;
+    padding:1rem;
+    display:flex;
+    flex-direction: column;
+}
+.card > * {
+    margin-top: 1rem;
+} 
+.donationComboElement {
+    position: relative;
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+    position: relative;
+
+}
+.donationComboElement::after {
+    content: '$';
+    position: absolute;
+    color: var(--slate-60);
+    top: 0;
+    bottom: 0;
+    left: 0;
+}
+.donationComboElement input {
+    flex: 1 1 auto;
+    width: 1%;
+    min-width: 0;
+    margin-bottom: 0;
+    border-bottom-left-radius: var(--sharedBorderRadius);
+    border-top-left-radius: var(--sharedBorderRadius);
+    border: 1px solid var(--slate-40);
+    /* border-radius: var(--sharedBorderRadius); */
+    font-size: 1em;
+    line-height: 0;
+    /* margin-bottom: 1rem; */
+    outline:none;
+    padding: .5rem 1rem;
+}
+
+  
+.donationComboElement button {
+    cursor: pointer;
+    border-bottom-right-radius: var(--sharedBorderRadius) ;
+    border-top-right-radius: var(--sharedBorderRadius) ;
+    z-index: 2;
+    position: relative;
+    background-color: var(--mint);
+    color: var(--white);
+    left:-1px;
+}
+
+/*
+.donationComboElement input::after {
+    content: '$';
+    position: absolute;
+    color: var(--slate-60);
+    top: 0;
+    bottom: 0;
+    left: 0;
+}
+*/
