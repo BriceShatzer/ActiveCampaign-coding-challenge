@@ -5,7 +5,7 @@ function ProgressBar (props) {
     const progress = props.totalAmount/5000
     let progressStyle;
     if (progress > 1) {
-        progressStyle = {background: '#139879 '}
+        progressStyle = {background: '#6ae6c9'}
     } else {
         // #b6f2e4 | --mint-40 | lighterGreen
         // #6ae6c9 | --mint-60 | darkerGreen 

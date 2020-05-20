@@ -9,8 +9,8 @@ class App extends Component{
     constructor(props) {
         super(props);
         this.state = {
-            donorCount: 4,
-            moneyRaised: 0,
+            donorCount: 11,
+            moneyRaised: 3750,
         };
         this.updateDonorCount = this.updateDonorCount.bind(this);
         this.updateMoneyRaised = this.updateMoneyRaised.bind(this);

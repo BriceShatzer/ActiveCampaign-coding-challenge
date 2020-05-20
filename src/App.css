@@ -1,5 +1,7 @@
 :root {
     --ocean-120: #1b54d9;
+    --ocean-60: #c1d1f7;
+    --ocean-40: #e3ebfc;
     --slate-40: #ced3e0;
     --mint: #19cca3;
     --mint-60: #6ae6c9;
@@ -28,7 +30,6 @@ button:active {
 }
 .App {
     max-width: 520px;
-    /* min-width: 280px; */
     display: flex;
     flex-direction: column;
 }
@@ -135,14 +136,3 @@ button:active {
     cursor: default;
     filter: grayscale(50%) opacity(75%);
 }
-
-/*
-.donationComboElement input::after {
-    content: '$';
-    position: absolute;
-    color: var(--slate-60);
-    top: 0;
-    bottom: 0;
-    left: 0;
-}
-*/

@@ -1,7 +1,5 @@
 const path = require('path');
 const webpack = require("webpack");
-//const HtmlWebpackPlugin = require('html-webpack-plugin');
-// const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 module.exports = {
     mode: 'development',
     entry: './src/index.js',
@@ -10,16 +8,6 @@ module.exports = {
         hotOnly: true,
         port: 3000
     },
-    // options: {
-    //     presets: ['@babel/env', '@babel/react']
-    // },
-    plugins: [
-        new webpack.HotModuleReplacementPlugin(),
-        // new CleanWebpackPlugin(),
-        // new HtmlWebpackPlugin({
-        //   title: 'Hot Module Replacement',
-        // }),
-    ],    
     module: {
         rules: [{
             test: /\.(js|jsx)$/,

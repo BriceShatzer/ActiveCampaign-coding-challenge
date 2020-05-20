@@ -4,24 +4,19 @@ import React, { Component} from "react";
 class Form extends Component {
     constructor(props) {
         super(props);
-        this.state = {donationAmount: 0};
-        /*{
-            donorCount: num,
-            moneyRaised: num,
-            updateMoneyRaised: func,
-            updateDonorCount: func,
-        }*/
+        this.state = {donationAmount: ''};
         this.giveNow = this.giveNow.bind(this);
         this.formInput = this.formInput.bind(this);
     }
 
     giveNow (){
-        this.props.updateMoneyRaised(this.state.donationAmount);
+        this.props.updateMoneyRaised(this.props.moneyRaised + this.state.donationAmount);
         this.props.updateDonorCount(this.props.donorCount+1);
+        this.setState({donationAmount: ''});
     }
     formInput (e) {
         const inputValue = e.target.value;
-        const onlyDigits = inputValue.replace(/\D/g,'');
+        const onlyDigits = parseInt(inputValue.replace(/\D/g,''));
         this.setState({donationAmount: onlyDigits});      
     }
     
@@ -50,10 +45,11 @@ class Form extends Component {
                         pattern="[0-9]" 
                         id="amount" 
                         min="5"
+                        placeholder="55"
                         onChange={this.formInput}
                         value={this.state.donationAmount}
                     />
-                    <button disabled={this.state.donationAmount<5} onClick={this.giveNow}>Give Now</button>                    
+                    <button disabled={this.state.donationAmount.length===0 || this.state.donationAmount < 5} onClick={this.giveNow}>Give Now</button>
                 </div>
             </div>
         )
